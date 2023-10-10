@@ -26,43 +26,102 @@ README.md lorem solutions.ipynb
 
 * Print `Hello World` on console.
 
+echo "Hello World"
+
+
 * Create a new directory named `new_dir`.
+
+mkdir "new_dir"
+
 
 * Delete that directory.
 
-* Copy the `sed.txt` file inside the lorem folder to the lorem-copy folder. TIP: It may be necessary to create the lorem-copy folder first. 
+rm -rf "new_dir"
+
+
+* Copy the `sed.txt` file inside the lorem folder to the lorem-copy folder. TIP: It may be necessary to create the lorem-copy folder first.
+
+mkdir lorem_copy
+cp sed.txt lorem_copy
+
 
 * Copy the other two files from the lorem folder to the lorem-copy folder in a single line. 
 
+cp lorem.txt at.txt lorem_copy/
+
+
 * Displays the contents of the `sed.txt` file inside the lorem folder. 
+
+cat sed.txt
+
 
 * Displays the contents of the `at.txt` and `lorem.txt` files inside the lorem folder. 
 
+cat at.txt lorem.txt
+
+
 * Displays the first 3 lines of the `sed.txt` file inside the lorem-copy folder. 
+
+head -n 3 sed.txt
+
 
 * Display the last 3 lines of the file `sed.txt` inside the lorem-copy folder. 
 
+tail -n 3 sed.txt
+
+
 * Adds `Homo homini lupus.` to the end of file `sed.txt` inside the lorem-copy folder. 
+
+echo "Homo homini lupus." >> sed.txt
+
 
 * Display the last 3 lines of the `sed.txt` file inside the lorem-copy folder. You should now see `Homo homini lupus.`. 
 
+tail -n 3 sed.txt
+
+
 * Replace all occurrences of `et` with `ET` from the `at.txt` file inside the lorem-copy folder. You must use `sed`. 
+
+sed -i "s/et/ET/g" at.txt
+
 
 * Find the active user on the system.
 
+
+
+
 * Find where you are on your file system.
+
+pwd
+
 
 * List the files ending with `.txt` in the lorem folder.
 
+ls *.txt
+
+
 * Count the number of lines that the file `sed.txt` has inside the lorem folder. 
+
+wc -l sed.txt
+
 
 * Counts the number of **files** beginning with `lorem` that are in this directory and in internal directories.
 
+
+
 * Find all occurrences of `et` in `at.txt` inside the lorem folder.
+
+grep -c "et" at.txt
+
 
 * Count the number of occurrences of the string `et` in `at.txt` inside the lorem folder. 
 
+grep -c "et" at.txt
+
+
 * Count the number of occurrences of the string `et` in all files in the lorem-copy directory. 
+
+
 
 ## bash files
 
